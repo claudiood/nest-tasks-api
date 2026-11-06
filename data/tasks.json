@@ -1,0 +1,21 @@
+[
+  {
+    "id": 4,
+    "title": "terefa 5",
+    "description": "descrição teste",
+    "assignee": "claudio duarte",
+    "dueDate": "2025-11-08T00:00:00.000Z",
+    "status": "DONE",
+    "createdAt": "2026-11-06T14:27:25.909Z",
+    "updatedAt": "2026-11-06T14:38:57.740Z"
+  },
+  {
+    "id": 6,
+    "title": "terefa 5",
+    "assignee": "claudio duarte",
+    "dueDate": "2025-11-07T00:00:00.000Z",
+    "status": "PENDING",
+    "createdAt": "2026-11-06T14:37:00.291Z",
+    "updatedAt": "2026-11-06T14:37:00.291Z"
+  }
+]
