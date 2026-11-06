@@ -32,7 +32,7 @@ export class TasksController {
   }
 
   @Post()
-  create(@Body() dto: CreateTaskDto): Task {
+  create(@Body() dto: CreateTaskDto): Promise<Task> {
     return this.tasksService.create(dto);
   }
 
@@ -40,7 +40,7 @@ export class TasksController {
   replace(
     @Param('id', ParseIntPipe) id: number,
     @Body() dto: ReplaceTaskDto,
-  ): Task {
+  ): Promise<Task> {
     return this.tasksService.replace(id, dto);
   }
 
@@ -48,13 +48,13 @@ export class TasksController {
   update(
     @Param('id', ParseIntPipe) id: number,
     @Body() dto: UpdateTaskDto,
-  ): Task {
+  ): Promise<Task> {
     return this.tasksService.update(id, dto);
   }
 
   @Delete(':id')
   @HttpCode(HttpStatus.NO_CONTENT)
-  remove(@Param('id', ParseIntPipe) id: number): void {
-    this.tasksService.remove(id);
+  remove(@Param('id', ParseIntPipe) id: number): Promise<void> {
+    return this.tasksService.remove(id);
   }
 }
